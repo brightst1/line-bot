@@ -8,6 +8,7 @@ $access_token = '85ygoELHTtBZzLh93gjML/kQRSq6fjVGCDKC4JYedPnbkA2vBOR3KUyg6UNOU1Q
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
+$echo $content;
 $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
@@ -19,7 +20,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
- 
+
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
@@ -43,7 +44,6 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
 			echo $result . "\r\n";
 		}
 	}

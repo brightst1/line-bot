@@ -2,7 +2,7 @@
 	//define("LINE_MESSAGING_API_CHANNEL_SECRET", 'your channel secret');
 	//define("LINE_MESSAGING_API_CHANNEL_TOKEN", 'your channel token');
 	require __DIR__."/vendor/autoload.php";
-	$access_token = "B3sPM9SXqSncKGC7V1VFZG05x0K0PpygNSxEaYwI9v4U+cMo+nGHgQC2ILqzysb4txtmQS5KBiMJ9SCPcU4YQUntZKyN/89D5CR/C6POwFMbfLGvUYiWduZccr9znYeM233gIznwj45D5xi2z48tigdB04t89/1O/w1cDnyilFU=";
+	$access_token = "85ygoELHTtBZzLh93gjML/kQRSq6fjVGCDKC4JYedPnbkA2vBOR3KUyg6UNOU1QqtxtmQS5KBiMJ9SCPcU4YQUntZKyN/89D5CR/C6POwFPSQICszzjBqzP4izKzUtfo7FDKMJblYwe5vlvE0BfH8QdB04t89/1O/w1cDnyilFU=";
 	//$bot = new \src\LINEBOT(new \src\LINEBOT\HTTPClient\CurlHTTPClient(LINE_MESSAGING_API_CHANNEL_TOKEN),['ChannelSecret']=>LINE_MESSAGING_API_CHANNEL_SECRET);
 	//$bot = new 
 	//$signature = $_SERVER["HTTP".\src\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];

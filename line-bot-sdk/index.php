@@ -25,13 +25,13 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
-			$post = array('text'=>$text,'userId'=>$userId,'time'=>$time);
+			$posts = array('text'=>$text,'userId'=>$userId,'time'=>$time);
 			
 			$ch = curl_init();
 			curl_setopt($ch,CURLOPT_URL,'https://befirst-it.dyndns.org:20443/bright/linebot/ws/create.php');
 			curl_setopt($ch,CURLOPT_CUSTOMREQUEST,"POST");
 			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-			curl_setopt($ch,CURLOPT_POSTFIELDS,$post);
+			curl_setopt($ch,CURLOPT_POSTFIELDS,$posts);
 			$result = curl_exec($ch);
 			curl_close($ch);
 			

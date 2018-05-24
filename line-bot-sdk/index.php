@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 			$posts = array('text'=>$text,'userId'=>$userId,'time'=>$time);
 			
 			$ch = curl_init();
-			curl_setopt($ch,CURLOPT_URL,'https://befirst-it.dyndns.org:20443/bright/linebot/ws/create.php');
+			curl_setopt($ch,CURLOPT_URL,'http://befirst-it.dyndns.org:2019/bright/linebot/ws/create.php');
 			curl_setopt($ch,CURLOPT_CUSTOMREQUEST,"POST");
 			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 			curl_setopt($ch,CURLOPT_POSTFIELDS,$posts);

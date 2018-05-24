@@ -1,3 +1,3 @@
 <?php
-echo "Hey yo Sup";
+echo "OK";
 ?>

@@ -6,9 +6,9 @@
 	//$bot = new \src\LINEBOT(new \src\LINEBOT\HTTPClient\CurlHTTPClient(LINE_MESSAGING_API_CHANNEL_TOKEN),['ChannelSecret']=>LINE_MESSAGING_API_CHANNEL_SECRET);
 	//$bot = new 
 	//$signature = $_SERVER["HTTP".\src\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
-	//$body = file_get_contents("php://input");
+	$body = file_get_contents("php://input");
 	//$events = $bot->parseEventRequest($body,$signature);
-	//$events = json_decode($body,true);
+	$events = json_decode($body,true);
 	foreach($events as $event){
 		if($event instanceof \src\LINEBOT\Event\MessageEvent\TextMessage){
 			$reply_token = $event->getReplyToken();

@@ -46,9 +46,9 @@
 	var_dump(json_decode($raw,1));
 	$raw = ob_get_clean();
 	file_put_contents('tmp/dump.txt',"\r\n". $raw."\r\n");*/
+	
+	
 	echo "OK";
-	
-	
 	
 	/*ob_start();
 	$raw = file_get_contents('php://input');

@@ -9,14 +9,14 @@
 	//$body = file_get_contents("php://input");
 	//$events = $bot->parseEventRequest($body,$signature);
 	//$events = json_decode($body,true);
-	/*foreach($events as $event){
+	foreach($events as $event){
 		if($event instanceof \src\LINEBOT\Event\MessageEvent\TextMessage){
 			$reply_token = $event->getReplyToken();
 			$text = $event->getText();
 			$bot->replyText($reply_token,$text);
 		}
-	}*/
-	/*if (!is_null($events['events'])) {
+	}
+	if (!is_null($events['events'])) {
 		foreach($events as $event){
 			if($event['type'] == 'message' && $event['message']['type']== 'text'){
 				$text = $event['source']['userId'];
@@ -40,7 +40,7 @@
 				echo $result . "\r\n";
 			}
 		}
-	}*/
+	}
 	/*ob_start();
 	$raw = file_get_contents('php://input');
 	var_dump(json_decode($raw,1));

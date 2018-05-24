@@ -1,4 +1,5 @@
 <?php
+/*
 	//define("LINE_MESSAGING_API_CHANNEL_SECRET", 'your channel secret');
 	//define("LINE_MESSAGING_API_CHANNEL_TOKEN", 'your channel token');
 	require __DIR__."/vendor/autoload.php";
@@ -41,13 +42,13 @@
 			}
 		}
 	}
-	/*ob_start();
+	ob_start();
 	$raw = file_get_contents('php://input');
 	var_dump(json_decode($raw,1));
 	$raw = ob_get_clean();
-	file_put_contents('tmp/dump.txt',"\r\n". $raw."\r\n");*/
+	file_put_contents('tmp/dump.txt',"\r\n". $raw."\r\n");
 	
-	
+	*/
 	echo "OK";
 	
 	/*ob_start();

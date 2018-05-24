@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 			
 			
 			// Build message to reply back
-			$messages = [
+		/*	$messages = [
 				'type' => 'text',
 				'text' => $result
 			];
@@ -59,7 +59,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($chs, CURLOPT_FOLLOWLOCATION, 1);
 			$results = curl_exec($chs);
 			curl_close($chs);
-			echo $result . "\r\n";
+			echo $result . "\r\n";*/
 		}
 	}
 }

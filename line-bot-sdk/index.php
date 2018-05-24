@@ -1,6 +1,6 @@
 <?php
 
-require "/vendor/autoload.php";
+require_once("/vendor/autoload.php");
 require_once('line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = '85ygoELHTtBZzLh93gjML/kQRSq6fjVGCDKC4JYedPnbkA2vBOR3KUyg6UNOU1QqtxtmQS5KBiMJ9SCPcU4YQUntZKyN/89D5CR/C6POwFPSQICszzjBqzP4izKzUtfo7FDKMJblYwe5vlvE0BfH8QdB04t89/1O/w1cDnyilFU=';

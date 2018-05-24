@@ -8,7 +8,7 @@ $access_token = '85ygoELHTtBZzLh93gjML/kQRSq6fjVGCDKC4JYedPnbkA2vBOR3KUyg6UNOU1Q
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
-echo $content;
+//echo $content;
 $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $content
 			];
 
 			// Make a POST Request to Messaging API to reply to sender

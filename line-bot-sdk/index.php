@@ -21,11 +21,21 @@ if (!is_null($events['events'])) {
 			//Get TimeStamp
 			$time = $event['timestamp'];
 			// Get text sent
-			$text = $event['message']['text']." && ".$userId." && ".$time;
+			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
-
+			$post = array('text'=>$text,'userId'=>$userId,'time'=>$time);
+			
+			$ch = curl_init();
+			curl_setopt($ch,CURLOPT_URL,'https://befirst-it.dyndns.org:20443/bright/linebot/ws/create.php');
+			curl_setopt($ch,CURLOPT_CUSTOMREQUEST,"POST");
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+			curl_setopt($ch,CURLOPT_POSTFIELDS,$post);
+			$result = curl_exec($ch);
+			curl_close($ch);
+			
+			/*
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
@@ -40,8 +50,8 @@ if (!is_null($events['events'])) {
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
-			$ch = curl_init($url);
+			*/
+			/*$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
@@ -49,7 +59,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-			echo $result . "\r\n";
+			echo $result . "\r\n";*/
 		}
 	}
 }
